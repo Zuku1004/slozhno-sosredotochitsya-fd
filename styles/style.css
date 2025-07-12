@@ -1,5 +1,405 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  font-family: var(--accent-font, sans-serif);
+  font-size: var(--accent-font-size-rem);
+  background-color: var(--background-color);
+  background-image: var(--background-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* HEADER */
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  position: relative;
+  justify-items: end;
+  align-items: center;
+  min-block-size: 668px;
+  block-size: auto;
+  padding: var(--accent-padding);
+}
+
+.header__rec {
+  position: absolute;
+  inset-block-start: 10px;
+  inset-inline-end: 38px;
+}
+
+.header__rec::before {
+  content: 'rec';
+  color: var(--additional-color);
+  text-transform: uppercase;
+}
+
+.header__rec::after {
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+  background-color: var(--additional-color);
+  box-shadow: 0 0 4px 3px var(--additional-color);
+  inline-size: 9px;
+  block-size: 9px;
+  inset-block-start: 8px;
+  inset-inline-end: -18px;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  gap: 10px;
+  max-width: 70px;
+}
+
+.header__theme-menu-item {
+  width: 70px;
+}
+
+.header__theme-menu-button {
+  display: flex;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  color: var(--additional-color);
+  font-size: var(--accent-font-size);
+  line-height: 18px;
+  text-transform: lowercase;
+  cursor: pointer;
+  inline-size: 70px;
+  block-size: 26px;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid currentColor;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid currentColor;
+  pointer-events: none;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid currentColor;
+}
+
+.header__title {
+  color: var(--title-color);
+  font-weight: 700;
+  font-size: var(--additional-font-size);
+  line-height: 0.825em;
+  text-shadow: 4px 4px var(--shadow-color);
+  justify-self: start;
+}
+
+.header__paragraph {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: var(--accent-font-size);
+  line-height: 23.4px;
+}
+
+/* DECORATED */
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  border-inline-end: 1px solid var(--additional-color);
+  border-block-start: 1px solid var(--additional-color);
+  inline-size: 25px;
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
+  block-size: 25px;
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  border-inline-start: 1px solid var(--additional-color);
+  border-block-end: 1px solid var(--additional-color);
+  inline-size: 25px;
+  inset-block-end: 10px;
+  inset-inline-start: 10px;
+  block-size: 25px;
+}
+
+/* TITLE decor */
+.title-decor {
+  color: var(--title-decor-color);
+  background-color: var(--additional-color);
+}
+
+/* MAIN content */
+.main {
+  padding: var(--accent-padding);
+  padding-block-start: var(--padding-block-start);
+}
+
+/* SECTION styles */
+.section:not(:last-of-type) {
+  margin-block-end: var(--section-block-end);
+}
+
+.section__article:not(:last-child) {
+  margin-block-end: var(--section-element-block-end);
+}
+
+.section__title {
+  color: var(--additional-color);
+  font-weight: 700;
+  font-size: var(--accent-font-size-rem);
+  line-height: 23.4px;
+  margin-block-end: var(--section-element-block-end);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+.section__subtitle {
+  font-weight: 700;
+  font-size: var(--accent-font-size);
+  line-height: 23.4px;
+  margin-block-end: var(--section-element-block-end);
+}
+
+/* ARTICLE */
+.article__title {
+  font-size: var(--accent-font-size);
+  line-height: 23.4px;
+}
+
+.article__title_type_light {
+  font-weight: 400;
+}
+
+.article__paragraph {
+  color: var(--accent-color);
+  font-weight: 400;
+  font-size: var(--accent-font-size);
+  line-height: 23.4px;
+  margin-block-start: 10px;
+}
+
+.article__link {
+  text-decoration: none;
+  text-shadow: 2px 2px var(--additional-color);
+}
+
+.article__link:hover {
+  border-block-end: 1px solid currentColor;
+}
+
+.article__link:focus {
+  outline: none;
+}
+
+.article__link:focus-visible {
+  outline: 1px solid var(--accent-color);
+}
+
+/* PICTURES */
+.section__pictures-container {
+  display: grid;
+  row-gap: 10px;
+}
+
+.section__image {
+  object-fit: cover;
+  object-position: center;
+  inline-size: 100%;
+  block-size: 100%;
+  max-block-size: 100%;
+}
+
+/* FOOTER */
+.footer {
+  display: grid;
+  grid-template-rows: 1fr;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  min-block-size: 668px;
+  block-size: auto;
+  margin-block-start: 20px;
+}
+
+.footer__title {
+  color: var(--title-color);
+  font-weight: 700;
+  font-size: var(--additional-font-size);
+  line-height: 95.7px;
+  text-shadow: 2px 2px var(--shadow-color);
+}
+
+/* MEDIA */
+@media (width >= 768px) {
+  .header {
+    min-block-size: 1024px;
+  }
+
+  .decorated-zone::after {
+    inset-block-start: 20px;
+    inset-inline-end: 20px;
+  }
+
+  .decorated-zone::before {
+    inset-block-end: 20px;
+    inset-inline-start: 20px;
+  }
+
+  .header__rec {
+    inset-block-start: 20px;
+    inset-inline-end: 48px;
+  }
+
+  .header__title {
+    position: relative;
+    right: 20px;
+  }
+
+  .header__paragraph {
+    inline-size: 50%;
+  }
+  .section {
+    display: grid;
+  }
+
+  .section__title {
+    width: 258px;
+    margin-bottom: 0;
+    align-self: start;
+    display: grid;
+    grid-template-columns: 8fr 1fr;
+  }
+
+  .section__grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+    align-items: start;
+  }
+
+  .section__grid-container--wide {
+    grid-column: 2 / 4;
+  }
+
+  .section__reduced-concentration-title {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .section__reduced-concentration .section__grid-container {
+    grid-column: 1 / -1;
+    grid-row: span 2;
+  }
+
+  .section__how-to-concentrate-subtitle {
+    align-self: start;
+  }
+
+  .section__pictures-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-auto-flow: dense;
+    gap: 20px;
+  }
+
+  .section__grid-container--concentration { 
+   margin-top: 20px;
+  }
+
+  .section__image {
+    margin-block-end: 0;
+  }
+
+  .section__image-sunset {
+    grid-column: span 2;
+  }
+
+  .section__image-street {
+    grid-column: span 2;
+  }
+
+  .section__image-ice-cream {
+    grid-column: 3;
+    grid-row: span 2;
+  }
+
+  .section__image-tape {
+    grid-column: 1;
+    grid-row: span 2;
+  }
+
+  .footer {
+    min-block-size: 1024px;
+    margin-block-start: 40px;
+  }
+}
+
+@media (width >= 1024px) {
+  .header {
+    min-block-size: 768px;
+  }
+  
+  .header__theme-menu {
+    display: flex;
+    justify-self: center;
+    align-self: start;
+  }
+
+  .header__theme-menu-list {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+    max-width: 230px;
+  }
+
+  .section__title {
+    width: 335px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 8fr;
+  }
+
+  .section__grid-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-columns: auto;
+  }
+
+  .section__grid-container--concentration {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: start;
+    margin-top: 0;
+  }
+
+  .section__reduced-concentration .section__grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.25rem;
+  }
+  
+  .section__reduced-concentration-title {
+    inline-size: 90%;
+  }
+
+  .footer {
+    min-block-size: 768px;
+  }
+  
+}
+@media (min-width: 375px) and (max-width: 767px) {
+  .section__subtitle {
+    margin-block-end: var(--section-element-block);
+  }
+  .footer__title {
+    margin-top: 15px;
+
+  }
 }
