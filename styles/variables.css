@@ -9,14 +9,14 @@
   --accent-font-size: 18px;
   --accent-font-size-rem: 1.125rem;
   --additional-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  --accent-font: 'IBM Plex mono';
+  --accent-font: 'IBM Plex mono', 'Courier New', monospace;
   --accent-color: #F1B2CE;
   --additional-color: #FF0070;
   --shadow-color: #FF0070;
   --additional-color-opacity: rgba(255,0,112, .4);
   --title-color: #DB00FF;
   --accent-padding: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
-  --padding-block-start: 40px;
+  --padding-block-start: 60px;
   --section-block-end: 50px;
   --section-element-block-end: 20px;
   --section-element-block: 15px;
@@ -30,11 +30,6 @@
     --additional-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     --accent-padding: 20px;
   }
-
-  .main {
-    --padding-block-start: 60px;
-  }
-
   .section:not(:last-of-type) {
     --section-block-end: 80px;
   }
@@ -45,5 +40,10 @@
 
   .footer {
     --footer-margin-block-start: 40px;
+  }
+}
+  @media (max-width: 380px) {
+  :root {
+  --padding-block-start: 40px;
   }
 }

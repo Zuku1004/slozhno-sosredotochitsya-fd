@@ -1,6 +1,6 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font, 'IBM Plex mono', 'Courier New', monospace);
   font-size: var(--accent-font-size-rem);
   background-color: var(--background-color);
   background-image: var(--background-image);
@@ -20,6 +20,7 @@
   min-block-size: 668px;
   block-size: auto;
   padding: var(--accent-padding);
+  height: 100vh;
 }
 
 .header__rec {
@@ -60,6 +61,7 @@
   display: flex;
   justify-content: center;
   border: none;
+  font-family: 'IBM Plex mono', 'Courier New', monospace;
   background-color: transparent;
   color: var(--additional-color);
   font-size: var(--accent-font-size);
@@ -71,7 +73,7 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid currentColor;
+  outline: 1px solid var(--additional-color-opacity);
 }
 
 .header__theme-menu-button_active {
@@ -225,6 +227,7 @@
   min-block-size: 668px;
   block-size: auto;
   margin-block-start: 20px;
+  height: 100vh;
 }
 
 .footer__title {
@@ -353,7 +356,6 @@
   }
 
   .header__theme-menu-list {
-    display: grid;
     grid-auto-flow: column;
     gap: 10px;
     max-width: 230px;
