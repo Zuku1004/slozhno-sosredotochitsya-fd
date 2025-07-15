@@ -4,7 +4,7 @@
   переключая тему
 */
 
-  :root.theme-light {
+:root.theme-light {
   --background-image: url(../images/cover-image-light.png);
   --background-color: #FFF1F7;
   --title-decor-color: #353430;
@@ -31,7 +31,12 @@
   --section-title-color: #353430;
   --decorated-color: #353430;
   }
+
+  .header__rec {
+    display: none;
+  }
 }
+
 
 .theme-light .header__rec {
   display: none;

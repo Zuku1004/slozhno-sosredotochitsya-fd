@@ -1,6 +1,6 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
-  font-family: var(--accent-font, 'IBM Plex mono', monospace);
+  font-family: var(--accent-font, 'IBM Plex mono'), monospace;
   font-size: var(--accent-font-size-rem);
   background-color: var(--background-color);
   background-image: var(--background-image);
