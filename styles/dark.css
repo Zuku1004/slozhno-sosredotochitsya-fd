@@ -1,19 +1,19 @@
-/*
-  Специально для тёмной темы при наличии класса,
+/* Специально для тёмной темы при наличии класса,
   здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
+  переключая тему */
+
 :root.theme-dark {
   --background-image: url(../images/cover-image-dark.png);
   --background-color: #000028;
   --title-decor-color: #000028;
-  --accent-color: #F1B2CE;
-  --additional-color: #FF0070;
-  --additional-color-opacity: rgba(255,0,112, .4);
-  --title-color: #DB00FF;
-  --shadow-color: #FF0070;
-  --section-title-color: #FF0070;
-   --decorated-color: #FF0070;
+  --accent-color: #f1b2ce;
+  --additional-color: #ff0070;
+  --additional-color-opacity: rgba(255, 0, 112, 0.4);
+  --title-color: #db00ff;
+  --shadow-color: #ff0070;
+  --section-title-color: #ff0070;
+  --decorated-color: #ff0070;
+  --rec-display: block;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,33 +21,23 @@
     --background-image: url(../images/cover-image-dark.png);
     --background-color: #000028;
     --title-decor-color: #000028;
-    --accent-color: #F1B2CE;
-    --additional-color: #FF0070;
-    --additional-color-opacity: rgba(255,0,112, .4);
-    --title-color: #DB00FF;
-    --shadow-color: #FF0070;
-    --section-title-color: #FF0070;
-     --decorated-color: #FF0070;
-
-    }
+    --accent-color: #f1b2ce;
+    --additional-color: #ff0070;
+    --additional-color-opacity: rgba(255, 0, 112, 0.4);
+    --title-color: #db00ff;
+    --shadow-color: #ff0070;
+    --section-title-color: #ff0070;
+    --decorated-color: #ff0070;
   }
-
-  .theme-auto .header__rec {
-    display: block;
-  }
-
-.theme-dark .header__rec {
+}
+  .theme-dark .header__rec {
   display: block;
 }
 
-.theme-dark .section__title,
-.theme-auto .section__title {
-  color: var(--section-title-color);
+  .theme-dark .header__theme-menu-button {
+  color: var(--decorated-color);
 }
 
-.theme-dark .decorated-zone::after,
-.theme-dark .decorated-zone::before,
-.theme-auto .decorated-zone::after,
-.theme-auto .decorated-zone::before {
-  border-color: var(--decorated-color);
+  .theme-dark .header__theme-menu-button:hover {
+  outline: 1px solid var(--additional-color-opacity);
 }

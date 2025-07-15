@@ -4,7 +4,7 @@
   переключая тему
 */
 
-:root.theme-light {
+  :root.theme-light {
   --background-image: url(../images/cover-image-light.png);
   --background-color: #FFF1F7;
   --title-decor-color: #353430;
@@ -14,7 +14,8 @@
   --title-color: #FFC2E6;
   --shadow-color: #FF8DCB;
   --section-title-color: #353430;
-   --decorated-color: #353430;
+  --decorated-color: #353430;
+  --rec-display: none;
 }
 
 @media (prefers-color-scheme: light) {
@@ -27,17 +28,8 @@
   --additional-color-opacity: rgba(50, 49, 45, .4);
   --title-color: #FFC2E6;
   --shadow-color: #FF8DCB;
-   --section-title-color: #353430;
-    --decorated-color: #353430;
-  }
-
-  .theme-light .section__title,
-.theme-auto .section__title {
-  color: var(--section-title-color);
-}
-
-  .theme-auto .header__rec {
-    display: none;
+  --section-title-color: #353430;
+  --decorated-color: #353430;
   }
 }
 
@@ -45,14 +37,6 @@
   display: none;
 }
 
-.theme-light .decorated-zone::after,
-.theme-light .decorated-zone::before,
-.theme-auto .decorated-zone::after,
-.theme-auto .decorated-zone::before {
-  border-color: var(--decorated-color);
-}
-
-.theme-light .header__theme-menu-button,
-.theme-auto .header__theme-menu-button {
+.theme-light .header__theme-menu-button {
   color: var(--decorated-color); 
 }

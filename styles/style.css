@@ -1,6 +1,6 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
-  font-family: var(--accent-font, 'IBM Plex mono', 'Courier New', monospace);
+  font-family: var(--accent-font, 'IBM Plex mono', monospace);
   font-size: var(--accent-font-size-rem);
   background-color: var(--background-color);
   background-image: var(--background-image);
@@ -27,6 +27,7 @@
   position: absolute;
   inset-block-start: 10px;
   inset-inline-end: 38px;
+  display: var(--rec-display, block);
 }
 
 .header__rec::before {
@@ -70,6 +71,7 @@
   cursor: pointer;
   inline-size: 70px;
   block-size: 26px;
+  color: var(--decorated-color);
 }
 
 .header__theme-menu-button:hover {
@@ -116,6 +118,7 @@
   inset-block-start: 10px;
   inset-inline-end: 10px;
   block-size: 25px;
+  border-color: var(--decorated-color);
 }
 
 .decorated-zone::before {
@@ -127,6 +130,7 @@
   inset-block-end: 10px;
   inset-inline-start: 10px;
   block-size: 25px;
+  border-color: var(--decorated-color);
 }
 
 /* TITLE decor */
@@ -159,6 +163,7 @@
   overflow-wrap: break-word;
   word-wrap: break-word;
   max-width: 100%;
+  color: var(--section-title-color);
 }
 
 .section__subtitle {
@@ -402,6 +407,5 @@
   }
   .footer__title {
     margin-top: 15px;
-
   }
 }

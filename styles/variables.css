@@ -1,7 +1,5 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+/* Переменные для вашего проекта
+  и их переопределение под различные устройства */
 :root {
   --background-image: url(../images/cover-image-dark.png);
   --background-color: #000028;
@@ -9,12 +7,12 @@
   --accent-font-size: 18px;
   --accent-font-size-rem: 1.125rem;
   --additional-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  --accent-font: 'IBM Plex mono', 'Courier New', monospace;
-  --accent-color: #F1B2CE;
-  --additional-color: #FF0070;
-  --shadow-color: #FF0070;
-  --additional-color-opacity: rgba(255,0,112, .4);
-  --title-color: #DB00FF;
+  --accent-font: 'IBM Plex mono', monospace;
+  --accent-color: #f1b2ce;
+  --additional-color: #ff0070;
+  --shadow-color: #ff0070;
+  --additional-color-opacity: rgba(255, 0, 112, .4);
+  --title-color: #db00ff;
   --accent-padding: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
   --padding-block-start: 60px;
   --section-block-end: 50px;
@@ -30,6 +28,7 @@
     --additional-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     --accent-padding: 20px;
   }
+  
   .section:not(:last-of-type) {
     --section-block-end: 80px;
   }
@@ -42,8 +41,9 @@
     --footer-margin-block-start: 40px;
   }
 }
-  @media (max-width: 380px) {
+
+@media (max-width: 380px) {
   :root {
-  --padding-block-start: 40px;
+    --padding-block-start: 40px;
   }
 }
